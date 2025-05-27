@@ -9,7 +9,7 @@ const ColourSelector = ({ config, selectNextBackground }) => {
       onClick={() =>
         selectNextBackground({
           background: background,
-          colorName: key,
+          colorName: label,
         })
       }
     >
