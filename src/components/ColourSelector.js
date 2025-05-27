@@ -1,4 +1,3 @@
-// src/components/ColourSelector.js
 import React from "react";
 
 const ColourSelector = ({ config, selectNextBackground }) => {
@@ -7,7 +6,7 @@ const ColourSelector = ({ config, selectNextBackground }) => {
   const handleClick = () => {
     selectNextBackground({
       background: background,
-      colorName: key // Important for test id
+      colorName: key
     });
   };
 

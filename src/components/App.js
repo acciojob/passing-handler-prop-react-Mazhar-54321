@@ -1,4 +1,3 @@
-// src/components/App.js
 import React, { useState } from "react";
 import "../styles/App.css";
 import Selection from "./Selection";
@@ -33,8 +32,8 @@ const App = () => {
     colorName: ""
   });
 
-  const applyColor = (updateStyle) => {
-    updateStyle(nextBackground);
+  const applyColor = (setBoxStyle) => {
+    setBoxStyle(nextBackground);
   };
 
   return (
@@ -43,7 +42,7 @@ const App = () => {
 
       <div className="row">
         {colourConfig.map((config) => (
-          <ColourSelector
+          <ColourSelector 
             key={config.key}
             config={config}
             selectNextBackground={selectNextBackground}
