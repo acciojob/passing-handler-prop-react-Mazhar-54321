@@ -1,23 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/App.css";
 
-const Selection = ({ data, applyColor }) => {
-  const [boxStyle, setBoxStyle] = useState({
-    background: "",
-    colorName: ""
-  });
-
-  const handleClick = () => {
-    applyColor(setBoxStyle); // apply the selected color to this box
-  };
-
+const Selection = ({ data, applyColor, background }) => {
   return (
     <div
+      onClick={applyColor}
       className="fix-box"
-      data-testid={boxStyle.colorName}
-      onClick={handleClick}
+      data-testid={background.colorName}
       style={{
-        backgroundColor: boxStyle.background
+        backgroundColor: background.background,
       }}
     >
       {data}

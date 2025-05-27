@@ -3,15 +3,16 @@ import React from "react";
 const ColourSelector = ({ config, selectNextBackground }) => {
   const { key, label, classname, background } = config;
 
-  const handleClick = () => {
-    selectNextBackground({
-      background: background,
-      colorName: key
-    });
-  };
-
   return (
-    <button className={classname} onClick={handleClick}>
+    <button
+      className={classname}
+      onClick={() =>
+        selectNextBackground({
+          background: background,
+          colorName: key,
+        })
+      }
+    >
       {label}
     </button>
   );
