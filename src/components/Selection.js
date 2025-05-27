@@ -1,20 +1,33 @@
+// src/components/Selection.js
+import React, { useState } from "react";
+import "../styles/App.css";
 
-import React, { useEffect, useState } from "react";
-import '../styles/App.css';
+const Selection = ({ data, applyColor }) => {
+  const [background, setBackground] = useState({
+    background: "",
+    colorName: ""
+  });
 
+  const handleClick = () => {
+    applyColor(setBackground); // Apply current selected color
+  };
 
-
-const title = 'Select the gradient and then the Box to change the color';
-
-const Selection = ({data,applyColor}) => {
-  const [background,setBackground]= useState({background:'',colorName:''});
-  console.log(background)
   return (
-    <div onClick={()=>applyColor(setBackground)} data-testid={background.colorName}  style={{width:'100px',height:'100px',backgroundColor:background.background,textAlign:'center',border:'1px solid white'}} >
-     {data}
-    </div >
-  )
-}
-
+    <div
+     className="fix-box"
+      onClick={handleClick}
+      data-testid={background.colorName}
+      style={{
+        width: "100px",
+        height: "100px",
+        backgroundColor: background.background,
+        textAlign: "center",
+        border: "1px solid white"
+      }}
+    >
+      {data}
+    </div>
+  );
+};
 
 export default Selection;
