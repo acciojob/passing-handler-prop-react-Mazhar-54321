@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     background-color: #3c415e;
+    color: white;
 }
 
 #master {
@@ -50,4 +51,8 @@ button {
 .btn-green {
     background: rgb(44, 209, 88);
     color: black;
+}
+.row{
+    display: flex;
+    column-gap: 10px;
 }
